@@ -17,20 +17,19 @@
 
 .typewriter-animation {
   animation: 
-    typewriter 4s steps(50) 1s 1 normal both, 
-    blinkingCursor 5s steps(50) infinite normal;
+    typewriter 0.5s steps(2) 1s 1 normal both, /* 2 steps for "Hi" */
+    blinkingCursor 0.8s steps(2) 2 normal both; /* blink for 2 cycles after typing */
 }
 @keyframes typewriter {
   from { width: 0; }
   to { width: 100%; }
 }
 @keyframes blinkingCursor{
-  from { border-right-color: rgba(255,255,255,.75); }
-  to { border-right-color: transparent; }
+  0% { border-right-color: rgba(255,255,255,.75); }
+  49% { border-right-color: rgba(255,255,255,.75); }
+  50% { border-right-color: transparent; }
+  100% { border-right-color: transparent; }
 }
-
-
-
 
 /* Global */
 body { margin-top: 4em; padding: 5em; color: #f1f1f1; font-family: 'Anonymous Pro', monospace;background-color: #673ab7; }
