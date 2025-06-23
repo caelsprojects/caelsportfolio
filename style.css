@@ -7,7 +7,7 @@
     width: 24em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 30px;
+    font-size: 80px;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -17,8 +17,8 @@
 
 .typewriter-animation {
   animation: 
-    typewriter 0.5s steps(2) 1s 1 normal both, /* 2 steps for "Hi" */
-    blinkingCursor 0.8s steps(2) 2 normal both; /* blink for 2 cycles after typing */
+    typewriter 5s steps(25) 1s 1 normal both, /* 2 steps for "Hi" */
+    blinkingCursor 0.9s steps(50) 2 normal both; /* blink for 2 cycles after typing */
 }
 @keyframes typewriter {
   from { width: 0; }
