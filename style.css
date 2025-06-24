@@ -18,7 +18,7 @@
 .typewriter-animation {
   animation: 
     typewriter 5s steps(25) 1s 1 normal both, /* 2 steps for "Hi" */
-    blinkingCursor 0.9s steps(50) 2 normal both; /* blink for 2 cycles after typing */
+    blinkingCursor 0.9s steps(75) 3 normal both; /* blink for 2 cycles after typing */
 }
 @keyframes typewriter {
   from { width: 0; }
