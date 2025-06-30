@@ -1,0 +1,21 @@
+/* Animation */
+.typewriter-animation {
+  animation:
+    typewriter 3s steps(36, end) 1s 1 normal both, /* 36 chars at 40 WPM ≈ 3.7s */
+    blinkingCursor 0.8s steps(1) infinite;
+  color: white;
+  border-right: 2px solid rgba(255,255,255,.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkingCursor {
+  0%, 49% { border-right-color: rgba(255,255,255,.75); }
+  50%, 100% { border-right-color: transparent; }
+}
+

@@ -1,0 +1,136 @@
+/* Cursor */
+.cursor {
+  position: relative;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 80px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: transparent;
+  transition: background 0.3s;
+  z-index: 100;
+}
+
+.navbar.scrolled {
+  background: #111;
+}
+
+.navbar-left {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none; 
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navbar-left:hover {
+   color: #e0e0e0;
+}
+.navbar-right {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 50px;
+  padding: 0;
+}
+
+.navbar-right li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.7px;
+  transition: color 0.2s;
+}
+
+.navbar-right li a:hover {
+  color: #e0e0e0;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .navbar {
+  padding: 0 1rem;
+  }
+  .navbar-left {
+  font-size: 1.3rem;
+  }
+  .navbar-right {
+  gap: 0.8rem;
+  font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-right {
+  display: none;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  background: #111;
+  flex-direction: column;
+  width: 100%;
+  text-align: right;
+  padding: 1rem 2rem;
+  }
+  .navbar-right.open {
+  display: flex;
+  }
+  .navbar-toggle {
+  display: block;
+  }
+  .title-banner {
+  min-height: 300px;
+  height: 100vh;
+  }
+  .about-me {
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 60vh;
+  }
+  .about-me-content {
+  margin-left: 5vw;
+  margin-top: 2rem;
+  max-width: 95vw;
+  }
+  .about-me h2 {
+  font-size: 2rem;
+  }
+  .about-me p {
+  font-size: 1rem;
+  }
+  .mainbody-title {
+  font-size: 1.2rem;
+  }
+}

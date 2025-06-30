@@ -1,0 +1,160 @@
+.portfolio {
+  width: 100vw;
+  background: #232323;
+  color: #fff;
+  padding: 60px 0 40px 0;
+  box-sizing: border-box;
+}
+
+.portfolio-title-bar {
+  margin-left: 0;
+  margin-bottom: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-title-bar h2 {
+  font-size: 2.2rem;
+  font-family: 'Anonymous Pro', monospace;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Project grid styles */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.project-block {
+  position: relative;
+  width: 220px;
+  height: 160px;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  background: #181818;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s;
+}
+
+.project-block:hover,
+.project-block:focus {
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+}
+
+.project-block .project-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(30,30,30,0.82);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 1.1rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.project-block:hover .project-hover,
+.project-block:focus .project-hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-block .project-lang {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.project-block .project-name {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    gap: 1.2rem;
+  }
+  .project-block {
+    width: 160px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    gap: 0.7rem;
+  }
+  .project-block {
+    width: 120px;
+    height: 90px;
+  }
+}
+
+.languages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-left: 7vw;
+  margin-top: 20px;
+}
+
+.language {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.language span {
+  margin-top: 4px;
+  font-size: 1rem;
+  font-family: 'Anonymous Pro', monospace;
+  color: #fff;
+}
