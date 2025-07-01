@@ -14,11 +14,7 @@
 
 
 
-.carousel-btn,
-.carousel-btn.prev,
-.carousel-btn.next {
-  display: none !important;
-}
+
 
 .carousel-image-wrapper {
   width: 100%;

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const carouselImages = [
     "https://i.ibb.co/3mV8yysB/6-C5239-D6-A956-477-B-98-D2-91615096-B29-F.jpg?",
     "https://i.ibb.co/G4bSY3my/53-B2-CDF7-0936-4-F3-C-9-D62-8-BF0555-A4856.jpg?q=80&w=800&h=900&fit=crop",
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&h=900&fit=crop"
+    "https://media.forgecdn.net/attachments/1124/10/screenshot-2025-03-12-095836.png"
   ];
   let current = 0;
   const carouselImg = document.querySelector('.carousel-image');

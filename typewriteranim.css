@@ -1,7 +1,7 @@
 /* Animation */
 .typewriter-animation {
   animation:
-    typewriter 3s steps(36, end) 1s 1 normal both, /* 36 chars at 40 WPM ≈ 3.7s */
+    typewriter 3s steps(36, end) 1s 1 normal both, 
     blinkingCursor 0.8s steps(1) infinite;
   color: white;
   border-right: 2px solid rgba(255,255,255,.75);
