@@ -131,7 +131,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
-  margin-left: 7vw;
+  justify-content: center;   /* Center the icons horizontally */
+  align-items: center;
+  margin-left: 0;            /* Remove left margin */
   margin-top: 20px;
 }
 

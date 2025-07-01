@@ -1,0 +1,96 @@
+.contact {
+  width: 100vw;
+  background: #181818;
+  color: #fff;
+  padding: 90px 0 60px 0; /* Increased top padding to push box down */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-content {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  color: #fff;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Anonymous Pro', monospace;
+  margin-bottom: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.contact-content form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  background: #222;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+}
+
+.contact-content input[type="text"],
+.contact-content input[type="email"],
+.contact-content textarea {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background: #292929;
+  color: #fff;
+  font-size: 1.08rem;
+  font-family: 'Anonymous Pro', monospace;
+  outline: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  resize: none;
+}
+
+.contact-content input[type="text"]:focus,
+.contact-content input[type="email"]:focus,
+.contact-content textarea:focus {
+  background: #323232;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+.contact-content textarea {
+  min-height: 120px;
+  max-height: 300px;
+}
+
+.contact-content button[type="submit"] {
+  background: linear-gradient(90deg, #333 0%, #444 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.95rem 0;
+  font-size: 1.1rem;
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.18s;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+}
+
+.contact-content button[type="submit"]:hover,
+.contact-content button[type="submit"]:focus {
+  background: linear-gradient(90deg, #444 0%, #222 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .contact-content form {
+    padding: 1.2rem 0.5rem;
+  }
+}

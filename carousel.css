@@ -12,21 +12,6 @@
   position: relative;
 }
 
-.carousel-image-wrapper {
-  width: 700px;
-  height: 400px;
-  max-width: 1000px;
-  max-height: 600px;
-  aspect-ratio: unset;
-  background: #222;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 18px;
-  margin-bottom: 16px;
-  position: relative;
-}
 
 
 .carousel-btn,
@@ -35,6 +20,33 @@
   display: none !important;
 }
 
+.carousel-image-wrapper {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 16/10;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 18px;
+  margin-bottom: 16px;
+  position: relative;
+  height: auto;
+  min-width: 220px;
+  min-height: 140px;
+}
+
+.carousel-image-wrapper img,
+.carousel-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 18px;
+  display: block;
+  transition: filter 0.3s;
+}
 
 .carousel-dots {
   display: flex;
@@ -47,6 +59,37 @@
   left: 0;
 }
 
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #555;
+  border: none;
+  outline: none;
+  transition: background 0.2s, width 0.2s, height 0.2s, border-radius 0.2s;
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel-dot.active {
+  width: 12px;
+  height: 28px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Make images fill the box exactly */
+.carousel-image-wrapper img,
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  transition: filter 0.3s;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1300px) {
   .about-carousel {
@@ -56,10 +99,14 @@
     margin-left: 5vw;
   }
   .carousel-image-wrapper {
-    width: 90vw;
     max-width: 600px;
-    height: 300px;
-    max-height: 400px;
+    aspect-ratio: 16/10;
+    min-width: 180px;
+    min-height: 100px;
+  }
+  .carousel-image-wrapper img,
+  .carousel-image {
+    max-height: 300px;
   }
 }
 
@@ -72,10 +119,14 @@
     max-width: 95vw;
   }
   .carousel-image-wrapper {
-    width: 95vw;
     max-width: 400px;
-    height: 200px;
-    max-height: 250px;
+    aspect-ratio: 16/10;
+    min-width: 120px;
+    min-height: 80px;
+  }
+  .carousel-image-wrapper img,
+  .carousel-image {
+    max-height: 200px;
   }
 }
 
@@ -87,9 +138,13 @@
     margin-left: 3vw;
   }
   .carousel-image-wrapper {
-    width: 90vw;
-    height: auto;
     max-width: 320px;
-    max-height: 360px;
+    aspect-ratio: 16/10;
+    min-width: 80px;
+    min-height: 50px;
+  }
+  .carousel-image-wrapper img,
+  .carousel-image {
+    max-height: 120px;
   }
 }
