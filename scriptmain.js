@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const carouselImages = [
     "https://i.ibb.co/3mV8yysB/6-C5239-D6-A956-477-B-98-D2-91615096-B29-F.jpg?",
-    "https://i.ibb.co/G4bSY3my/53-B2-CDF7-0936-4-F3-C-9-D62-8-BF0555-A4856.jpg?q=80&w=800&h=900&fit=crop",
+    "https://i.ibb.co/xSwcFTsm/Screenshot-2025-06-30-235930.png",
     "https://media.forgecdn.net/attachments/1124/10/screenshot-2025-03-12-095836.png"
   ];
   let current = 0;
@@ -50,3 +50,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // Allow manual dot click
   showImage(0);
 });
+
+
+function showImage(idx) {
+  current = idx;
+  carouselImg.src = carouselImages[current];
+  carouselImg.style.objectFit = "cover";      // Fill the box
+  carouselImg.style.objectPosition = "center"; // Center the image
+  carouselImg.style.width = "100%";
+  carouselImg.style.height = "100%";
+  [...dotsContainer.children].forEach((dot, i) => {
+    dot.classList.toggle('active', i === current);
+  });
+}
