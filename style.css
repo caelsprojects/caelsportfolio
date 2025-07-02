@@ -147,4 +147,55 @@ html {
   scroll-behavior: smooth; 
 }
 
+/* EVERYTHING RESPONSIVE RAHHHHHH */
 
+@media (max-width: 1100px) {
+  .about-me {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 30px 0;
+  }
+  .about-me-content {
+    margin-left: 0;
+    padding: 1.5rem 2vw 0 2vw;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .title-banner {
+    height: 60vh;
+    min-height: 250px;
+  }
+  .mainbody-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-me {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 18px 0;
+  }
+  .about-me-content {
+    margin-left: 0;
+    padding: 1rem 4vw 0 4vw;
+    max-width: 100vw;
+  }
+  .title-banner {
+    height: 45vh;
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mainbody-title {
+    font-size: 1.1rem;
+  }
+  .about-me h2 {
+    font-size: 1.5rem;
+  }
+}

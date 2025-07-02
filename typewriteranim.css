@@ -1,4 +1,3 @@
-/* Animation */
 .typewriter-animation {
   animation:
     typewriter 3s steps(36, end) 1s 1 normal both, 
@@ -7,6 +6,9 @@
   border-right: 2px solid rgba(255,255,255,.75);
   white-space: nowrap;
   overflow: hidden;
+  width: fit-content; /* Ensure width fits content exactly */
+  padding-right: 0;   /* Remove any extra space at the end */
+  margin-right: 0px; /* Pull the cursor back to touch the last character */
 }
 
 @keyframes typewriter {
